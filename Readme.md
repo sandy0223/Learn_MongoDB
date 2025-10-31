@@ -57,15 +57,16 @@
 
 ### Inserting Documents
 
-- `db.<collection>.insertOne({})` - Insert a document into a collection
-- `db.<collection>.insertMany([{}, {}])` - Insert multiple documents into a collection
-- `db.<collection>.insertMany([{}, {}])` - Insert multiple documents into a collection
+- `db.<collection>.insertOne({'name': 'John Doe', 'age': 30})` - Insert a document into a collection
+- `db.<collection>.insertMany([{'name': 'Jane Doe', 'age': 25}, {'name': 'Jim Doe', 'age': 35}])` - Insert multiple documents into a collection
+- `db.<collection>.insertMany([{'name': 'Jake Doe', 'age': 40}, {'name': 'Jill Doe', 'age': 45}])` - Insert multiple documents into a collection
 
 ### Inserts types
 
 - ordered - Insert documents in the order they are provided
 - if there is any duplicate key then it will throw an error and stop the insertion, if there is any valid document before the error then it will insert that document.
 - unordered - Insert documents in any order
+-syntax: `db.<collection>.insertMany([{}, {}], {ordered: false})`
 
 ### show Commands
 
@@ -74,3 +75,15 @@
 - `db.<collection>.find({}).limit(10)` - Find documents in a collection based on a query and limit the result to 10 documents
 - `db.<collection>.find({}).sort({})` - Find documents in a collection based on a query and sort the result
 - `db.<collection>.find({}).count()` - Find documents in a collection based on a query and count the result
+
+## Delete Commands
+
+- `db.<collection>.deleteOne({})` - Delete a document from a collection
+- `db.<collection>.deleteMany({})` - Delete multiple documents from a collection
+- `db.<collection>.drop()` - Drop a collection
+- `db.dropDatabase()` - Drop the current database
+
+## Importing JSON Data
+
+- `mongoimport jsonfile.json -d <database> -c <collection>` - Import JSON data into a collection (if there is objects only)
+- `mongoimport jsonfile.json -d <database> -c <collection> --jsonArray` - Import JSON data into a collection (if there is array of objects)
