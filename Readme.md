@@ -134,3 +134,4 @@
 - `$project` - Specifies the fields to include or exclude in the result
 -syntax: `db.<collection>.find({}, {field: 1})` - Include the field in the result
 -syntax: `db.<collection>.find({}, {field: 0})` - Exclude the field in the result
+-we can't use inclusion and exclusion together in the same query but in case of id we can use both.
