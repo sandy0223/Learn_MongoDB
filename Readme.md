@@ -98,3 +98,39 @@
 -syntax: `db.<collection>.find({$or: [{}, {}]})`
 -syntax: `db.<collection>.find({$not: {}})`
 -syntax: `db.<collection>.find({$nor: [{}, {}]})`
+
+## Comparision Operators
+
+- `$eq` - Returns documents where the value of a field is equal to the specified value
+- `$ne` - Returns documents where the value of a field is not equal to the specified value
+- `$gt` - Returns documents where the value of a field is greater than the specified value
+- `$gte` - Returns documents where the value of a field is greater than or equal to the specified value
+- `$lt` - Returns documents where the value of a field is less than the specified value
+- `$lte` - Returns documents where the value of a field is less than or equal to the specified value
+-syntax: `db.<collection>.find({field: {$eq: value}})`
+-syntax: `db.<collection>.find({field: {$ne: value}})`
+-syntax: `db.<collection>.find({field: {$gt: value}})`
+-syntax: `db.<collection>.find({field: {$gte: value}})`
+-syntax: `db.<collection>.find({field: {$lt: value}})`
+-syntax: `db.<collection>.find({field: {$lte: value}})`
+
+- `$in` - Returns documents where the value of a field is in the specified array
+- `$nin` - Returns documents where the value of a field is not in the specified array
+-syntax: `db.<collection>.find({field: {$in: [value1, value2]}})`
+-syntax: `db.<collection>.find({field: {$nin: [value1, value2]}})`
+
+## $expr
+
+- `$expr` - Allows the use of aggregation expressions within the query language
+-syntax: `db.<collection>.find({$expr: {$gt: ['$field', value]}})`
+
+## $size
+
+- `$size` - Returns documents where the value of a field is an array with the specified number of elements
+-syntax: `db.<collection>.find({field: {$size: value}})`
+
+## Projection Operators
+
+- `$project` - Specifies the fields to include or exclude in the result
+-syntax: `db.<collection>.find({}, {field: 1})` - Include the field in the result
+-syntax: `db.<collection>.find({}, {field: 0})` - Exclude the field in the result
