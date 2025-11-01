@@ -87,3 +87,14 @@
 
 - `mongoimport jsonfile.json -d <database> -c <collection>` - Import JSON data into a collection (if there is objects only)
 - `mongoimport jsonfile.json -d <database> -c <collection> --jsonArray` - Import JSON data into a collection (if there is array of objects)
+
+## Logical Operators
+
+- `$and` - Returns documents that match all the specified conditions
+- `$or` - Returns documents that match any of the specified conditions
+- `$not` - Returns documents that do not match the specified condition
+- `$nor` - Returns documents that do not match any of the specified conditions
+-syntax: `db.<collection>.find({$and: [{}, {}]})`
+-syntax: `db.<collection>.find({$or: [{}, {}]})`
+-syntax: `db.<collection>.find({$not: {}})`
+-syntax: `db.<collection>.find({$nor: [{}, {}]})`
