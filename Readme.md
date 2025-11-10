@@ -99,6 +99,14 @@
 - `$pop` - Remove the first or last element from an array field in a document
 -syntax: `db.<collection>.updateOne({field: value}, {$set: {field: new_value}})`
 -syntax: `db.<collection>.updateMany({field: value}, {$set: {field: new_value}})`
+-syntax: `db.<collection>.updateOne({field: value}, {$unset: {field: ''}})`
+-syntax: `db.<collection>.updateOne({field: value}, {$inc: {field: 1}})`
+-syntax: `db.<collection>.updateOne({field: value}, {$mul: {field: 2}})`
+-syntax: `db.<collection>.updateOne({field: value}, {$rename: {field: 'new_field'}})`
+-syntax: `db.<collection>.updateOne({field: value}, {$push: {field: 'new_element'}})`
+-syntax: `db.<collection>.updateOne({field: value}, {$pull: {field: 'element_to_remove'}})`
+-syntax: `db.<collection>.updateOne({field: value}, {$addToSet: {field: 'new_element'}})`
+-syntax: `db.<collection>.updateOne({field: value}, {$pop: {field: 1}})`
 
 ## Importing JSON Data
 
