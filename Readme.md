@@ -108,6 +108,16 @@
 -syntax: `db.<collection>.updateOne({field: value}, {$addToSet: {field: 'new_element'}})`
 -syntax: `db.<collection>.updateOne({field: value}, {$pop: {field: 1}})`
 
+## Replace Commands
+
+- `db.<collection>.replaceOne({existing_field: value}, {new_field: new_value})` - Replace a document in a collection
+- `db.<collection>.replaceMany({existing_field: value}, {new_field: new_value}, {multi: true})` - Replace multiple documents in a collection
+
+## Find&Replace , Find&Delete
+
+- `db.<collection>.findOneAndReplace({existing_field: value}, {new_field: new_value})` - Find and replace a document in a collection
+- `db.<collection>.findOneAndDelete({existing_field: value})` - Find and delete a document in a collection
+
 ## Importing JSON Data
 
 - `mongoimport jsonfile.json -d <database> -c <collection>` - Import JSON data into a collection (if there is objects only)
