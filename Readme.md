@@ -88,6 +88,17 @@
 
 - `db.<collection>.updateOne({}, {})` - Update a document in a collection
 - `db.<collection>.updateMany({}, {})` - Update multiple documents in a collection
+- `$set` - Update the value of a field in a document
+- `$unset` - Remove a field from a document
+- `$inc` - Increment the value of a field in a document
+- `$mul` - Multiply the value of a field in a document
+- `$rename` - Rename a field in a document
+- `$push` - Add an element to an array field in a document
+- `$pull` - Remove an element from an array field in a document
+- `$addToSet` - Add an element to an array field in a document if it does not already exist
+- `$pop` - Remove the first or last element from an array field in a document
+-syntax: `db.<collection>.updateOne({field: value}, {$set: {field: new_value}})`
+-syntax: `db.<collection>.updateMany({field: value}, {$set: {field: new_value}})`
 
 ## Importing JSON Data
 
