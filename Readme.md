@@ -45,6 +45,7 @@
 
 - `show dbs` - Show all databases
 - `use <database>` - Use a database
+- `db.createCollection('name')` - Create a collection
 - `show collections` - Show all collections
 - `db.<collection>.find()` - Find all documents in a collection
 - `db.<collection>.insertOne({})` - Insert a document into a collection
