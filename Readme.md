@@ -84,6 +84,11 @@
 - `db.<collection>.drop()` - Drop a collection
 - `db.dropDatabase()` - Drop the current database
 
+## Update Commands
+
+- `db.<collection>.updateOne({}, {})` - Update a document in a collection
+- `db.<collection>.updateMany({}, {})` - Update multiple documents in a collection
+
 ## Importing JSON Data
 
 - `mongoimport jsonfile.json -d <database> -c <collection>` - Import JSON data into a collection (if there is objects only)
